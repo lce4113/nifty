@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Cities",
+    "description": "Cities with the highest populations from 1500-2018.",
+    "file": "./Data/cities.txt"
+  },
+  {
+    "name": "Countries",
+    "description": "Countries with the highest populations from 1950-2100.",
+    "file": "./Data/countries.txt"
+  },
+  {
+    "name": "USA Cities",
+    "description": "Cities in the USA with the highest populations from 1790–2018.",
+    "file": "./Data/cities-usa.txt"
+  },
+  {
+    "name": "Brands",
+    "description": "Most valuable brands from 2000–2018.",
+    "file": "./Data/brands.txt"
+  },
+  {
+    "name": "Movies",
+    "description": "Highest-grossing movies from 1982–2019.",
+    "file": "./Data/movies.txt"
+  },
+  {
+    "name": "Baby Names",
+    "description": "Most popular baby names from 1880–2018.",
+    "file": "./Data/baby-names.txt"
+  },
+  {
+    "name": "Football",
+    "description": "Football clubs with the highest ELO ratings from 1960–2019.",
+    "file": "./Data/football.txt"
+  },
+  {
+    "name": "Endgame",
+    "description": "Characters in Endgame with the most screen time from minute 1 to 170.",
+    "file": "./Data/endgame.txt"
+  },
+  {
+    "name": "Game of Thrones",
+    "description": "Characters in Endgame with the most screen time from S01E01 to S8E06.",
+    "file": "./Data/game-of-thrones.txt"
+  }
+]
