@@ -7,9 +7,9 @@
 
 #graph-wrapper-2 {
   max-width: calc(100vw - 50px);
-  max-height: calc(100vh - 200px);
-  width: calc(100vh - 100px);
-  height: calc(100vw - 200px);
+  max-height: calc(100vh - 300px);
+  width: calc(120vh - 100px);
+  height: calc(100vw - 300px);
   background: rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
   display: flex;
@@ -19,13 +19,19 @@
 #title {
   align-self: center;
   font-size: 30px;
-  font-family: "Varela Round", sans-serif;
+  font-family: sans-serif;
   padding: 5px;
+}
+#units {
+  align-self: center;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 #graph-wrapper-3 {
   flex-grow: 1;
-  padding-top: 20px;
+  padding-top: 40px;
   position: relative;
   display: flex;
 }
@@ -37,17 +43,10 @@
   flex-direction: column;
 }
 
-.bar-wrapper {
+.bar {
+  position: relative;
   flex-grow: 1;
   margin-top: 10px;
-  display: flex;
-  align-items: stretch;
-}
-.bar {
-  background: rgb(185, 200, 230);
-  /* background: rgb(215, 210, 145); */
-  /* background: rgb(225, 185, 175); */
-  /* background: rgb(200, 190, 195); */
   padding-right: 10px;
   display: flex;
   justify-content: flex-end;
@@ -60,8 +59,11 @@
   font-size: 100%;
 }
 .value {
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
   font-family: sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   padding-left: 5px;
   display: flex;
   justify-content: flex-start;
@@ -70,7 +72,6 @@
 
 #hashes {
   position: absolute;
-  width: 90%;
   height: calc(100% - 20px);
   display: flex;
   justify-content: space-between;
@@ -91,4 +92,23 @@
 }
 .line {
   width: 1px;
+}
+
+#info {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+#date {
+  font-size: 80px;
+  color: rgba(0, 0, 0, 0.4);
+  margin: -10px 0;
+  font-family: sans-serif;
+  text-align: right;
+}
+#source {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: sans-serif;
+  text-align: right;
 }
