@@ -44,7 +44,6 @@
   align-items: stretch;
 }
 .bar {
-  width: 90%;
   background: rgb(185, 200, 230);
   /* background: rgb(215, 210, 145); */
   /* background: rgb(225, 185, 175); */
@@ -58,7 +57,7 @@
   font-family: sans-serif;
   color: black;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 100%;
 }
 .value {
   font-family: sans-serif;
