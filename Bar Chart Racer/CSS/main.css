@@ -5,6 +5,7 @@
 }
 
 body {
+  position: relative;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -38,6 +39,10 @@ body {
   align-items: center;
 }
 .option:hover {
-  transform: rotateX(10deg) rotateY(20deg);
+  transform: rotate(3deg);
   filter: brightness(0.9);
+}
+
+#choose-file {
+  background: rgb(235, 90, 90);
 }

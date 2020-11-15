@@ -9,13 +9,14 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/choose-file.css">
     <link rel="stylesheet" href="./CSS/graph.css">
 
     <!-- JS -->
     <script src="./Libraries/handlebars.min-v4.7.6.js"></script>
     <script src="./Libraries/jquery-3.5.1.min.js"></script>
     <script src="./JS/parse.js"></script>
-    <script src="./JS/frames.js"></script>
+    <script src="./JS/frames.js" defer></script>
     <script src="./JS/main.js" defer></script>
 
     <!-- Meta -->
@@ -27,6 +28,7 @@
 
   <body>
     <div id="options">
+      <div class="option" id="choose-file">Choose A File</div>
     </div>
     <div id="graph-wrapper-1">
       <div id="graph-wrapper-2">
@@ -37,6 +39,22 @@
           <div id="graph"></div>
           <div id="info"></div>
         </div>
+      </div>
+    </div>
+    <div id="popup-wrapper" style="display: none;">
+      <div id="choose-file-popup">
+        <div id="close-popup">
+          <div id="pos-close-button"></div>
+          <div id="neg-close-button"></div>
+        </div>
+        <div id="drag-and-drop">
+          Drag a file here or...
+          <label id="file-input">
+            <input type="file" accept=".json, .txt">
+            Select a File
+          </label>
+        </div>
+        <a id="example-file" href="./Data/cities.txt" download></a>
       </div>
     </div>
   </body>

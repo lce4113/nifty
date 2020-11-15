@@ -1,10 +1,14 @@
+// jQuery variables
+const $graph = $("#graph");
+const $hashes = $("#hashes");
+
 const colors = [
   "rgb(195, 200, 220)",
   "rgb(215, 210, 185)",
   "rgb(225, 185, 175)",
   "rgb(210, 190, 195)",
   "rgb(240, 215, 170)",
-  "rgb(200, 235, 180)",
+  "rgb(190, 225, 175)",
   "rgb(185, 225, 245)"
 ];
 var categories, categoryNum;
@@ -19,8 +23,6 @@ function setup(data) {
   categories = {};
   categoryNum = 0;
   $("#title").text(data.title);
-  console.log(data);
-  console.log(data.units);
   $("#units").text(data.units);
   $("#info").html(`
 <div id="date"></div>
@@ -28,7 +30,7 @@ function setup(data) {
 }
 
 function draw(stamp) {
-  $("#graph").empty();
+  $graph.empty();
   const max = stamp.bars[0].value;
   for (const bar of stamp.bars) {
     if (categories[bar.category]) {
@@ -38,7 +40,7 @@ function draw(stamp) {
       categories[bar.category] = barColor;
       categoryNum++;
     }
-    $("#graph").append(`
+    $graph.append(`
   <div class="bar" style="background: ${barColor};
 width: ${bar.value / max * 90}%;">
     <div class="name">${bar.name}</div>
@@ -46,7 +48,7 @@ width: ${bar.value / max * 90}%;">
   </div>`);
   }
 
-  $("#hashes").empty();
+  $hashes.empty();
   const div = parseInt(max / 8);
   const len = div.toString().length - 1;
   const r = Math.ceil(div / 10 ** len);
@@ -55,7 +57,7 @@ width: ${bar.value / max * 90}%;">
   const hashes = Math.floor(max / base);
   // console.log(max, len, r, baseDigit, base, hashes);
   for (let i = 0; i <= hashes; i++) {
-    $("#hashes").append(`
+    $hashes.append(`
 <div class="hash">
   <div class="num">${comma(base * i)}</div>
   <div class="line"></div>
