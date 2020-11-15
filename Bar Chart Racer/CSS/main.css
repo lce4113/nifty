@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 #options {
   padding: 10px 5px;
   display: flex;

@@ -13,14 +13,20 @@ function parseData(text) {
   var timestamps = text.match(/\d+(\n(.+,)+.+)+\n/g);
   timestamps = timestamps.map(stamp => {
     stamp = stamp.match(/(.+,)+.+/g);
+    var bars = stamp.map(t => {
+      const split = t.split(',');
+      return {
+        "name": split[1],
+        "country": split[2],
+        "value": split[3],
+        "category": split[4]
+      };
+    });
+    bars.sort((a, b) => b.value - a.value);
+    bars = bars.slice(0, 10);
     return {
       "date": stamp[0].split(',', 1)[0],
-      "stamp": stamp.map(t => ({
-        "name": t.split(',')[1],
-        "country": t.split(',')[2],
-        "value": t.split(',')[3],
-        "category": t.split(',')[4]
-      }))
+      "bars": bars
     };
   });
   data.timestamps = timestamps;
