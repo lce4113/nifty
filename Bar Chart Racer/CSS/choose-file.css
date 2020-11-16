@@ -10,13 +10,14 @@
 }
 
 #close-popup {
-  display: block;
+  position: absolute;
   height: 30px;
   width: 30px;
-  position: absolute;
   top: 0;
   right: 0;
   margin: 10px;
+  cursor: pointer;
+  z-index: 1;
 }
 #pos-close-button,
 #neg-close-button {
@@ -25,7 +26,7 @@
   transform: translateY(-50%);
   width: 30px;
   height: 3px;
-  background: rgb(100, 100, 100);
+  background: rgb(125, 125, 125);
   transition: background 0.2s;
 }
 #pos-close-button {
@@ -59,27 +60,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: background 0.2s;
 }
 
 #file-input {
-  border: 1px solid black;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   padding: 5px;
   margin-top: 10px;
-  border-radius: 10px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
   cursor: pointer;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: background 0.2s;
+  transition: box-shadow 0.2s;
 }
-#file-input:hover {
-  background: rgba(0, 0, 0, 0.2);
+#file-input:active {
+  box-shadow: none;
 }
 #file-input > input[type="file"] {
   display: none;
 }
 
-#example-file {
+#file-format {
+  width: 100%;
+  display: flex;
 }

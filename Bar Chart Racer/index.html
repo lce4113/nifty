@@ -16,7 +16,7 @@
     <script src="./Libraries/handlebars.min-v4.7.6.js"></script>
     <script src="./Libraries/jquery-3.5.1.min.js"></script>
     <script src="./JS/parse.js"></script>
-    <script src="./JS/frames.js" defer></script>
+    <script src="./JS/frames.js"></script>
     <script src="./JS/main.js" defer></script>
 
     <!-- Meta -->
@@ -47,14 +47,23 @@
           <div id="pos-close-button"></div>
           <div id="neg-close-button"></div>
         </div>
-        <div id="drag-and-drop">
-          Drag a file here or...
+        <div id="drag-and-drop" ondragstart="e.dataTransfer.setData('text/plain','text')" draggable>
+          <strike>Drag a file here</strike> – or –
           <label id="file-input">
             <input type="file" accept=".json, .txt">
             Select a File
           </label>
         </div>
-        <a id="example-file" href="./Data/cities.txt" download></a>
+        <div id="file-format">
+          <div>
+            .txt
+            <a class="example-file" href="./Data/cities.txt" download></a>
+          </div>
+          <div>
+            .json
+            <a class="example-file" href="./Data/cities.json" download></a>
+          </div>
+        </div>
       </div>
     </div>
   </body>
