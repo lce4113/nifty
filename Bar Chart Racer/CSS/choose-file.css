@@ -42,7 +42,7 @@
 
 #choose-file-popup {
   position: relative;
-  width: 50%;
+  width: 80%;
   background: rgb(200, 200, 200);
   padding: 10px;
 
@@ -52,7 +52,7 @@
 
 #drag-and-drop {
   border: 2px dashed black;
-  height: 400px;
+  height: 300px;
   font-family: sans-serif;
   font-size: 25px;
 
@@ -64,19 +64,20 @@
 }
 
 #file-input {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   padding: 5px;
   margin-top: 10px;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
   cursor: pointer;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 #file-input:active {
   box-shadow: none;
+  transform: translate(3px, 3px);
 }
 #file-input > input[type="file"] {
   display: none;
@@ -88,21 +89,62 @@
   border-right: 2px dotted black;
 }
 #file-format > div {
-  flex-grow: 1;
+  width: 50%;
   border-left: 2px dotted black;
   border-bottom: 2px dotted black;
   padding: 10px;
   font-size: 50px;
   font-weight: bold;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+
+.title-file-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 .example-file {
   font-size: 20px;
   font-weight: normal;
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   background: rgb(255, 100, 100);
-  color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  transition: filter 0.2s;
+}
+.example-file:hover {
+  filter: brightness(0.9);
+}
+
+#file-format > div > code {
+  word-break: break-word;
+  font-weight: normal;
+  font-size: 5px;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+#file-format > div:nth-of-type(1) > code {
+  font-size: 15px;
+}
+#file-format > div:nth-of-type(2) > code {
+  font-size: 15px;
+}
+
+.example-file > img {
+  margin-left: 5px;
+  width: 15px;
+  filter: invert(1);
 }

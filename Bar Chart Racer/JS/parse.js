@@ -10,11 +10,11 @@ function parseData(text) {
   data.title = meta[0];
   data.units = meta[1];
   data.source = meta[2];
-  var timestamps = text.match(/\d+(\n(.+,)+.+)+\n/g);
+  var timestamps = text.match(/(\d+)?(\n(.+,)+.+)+\n/g);
   timestamps = timestamps.map(stamp => {
     stamp = stamp.match(/(.+,)+.+/g);
     var bars = stamp.map(t => {
-      const split = t.split(',');
+      const split = t.split(',', 5);
       return {
         "name": split[1],
         "country": split[2],

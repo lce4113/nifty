@@ -1,0 +1,53 @@
+{
+  "title": "The most populous cities in the world from 1500 to 2018",
+  "units": "Population (thousands)",
+  "source": "Sources: SEDAC; United Nations; Demographia",
+  "timestamps": [
+    {
+      "date": "1500",
+      "bars": [
+        {
+          "name": "Beijing",
+          "country": "China",
+          "value": "672",
+          "category": "East Asia"
+        },
+        {
+          "name": "Vijayanagar",
+          "country": "India",
+          "value": "500",
+          "category": "South Asia"
+        },
+        {
+          "name": "Cairo",
+          "country": "Egypt",
+          "value": "400",
+          "category": "Middle East"
+        }
+      ]
+    },
+    {
+      "date": "1501",
+      "bars": [
+        {
+          "name": "Beijing",
+          "country": "China",
+          "value": "672",
+          "category": "East Asia"
+        },
+        {
+          "name": "Vijayanagar",
+          "country": "India",
+          "value": "500",
+          "category": "South Asia"
+        },
+        {
+          "name": "Cairo",
+          "country": "Egypt",
+          "value": "399",
+          "category": "Middle East"
+        }
+      ]
+    }
+  ]
+}
