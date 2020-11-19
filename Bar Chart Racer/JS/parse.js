@@ -32,3 +32,13 @@ function parseData(text) {
   data.timestamps = timestamps;
   return data;
 }
+
+function sortData(data) {
+  data.timestamps = data.timestamps.map(stamp => {
+    stamp.bars = stamp.bars
+      .sort((a, b) => b.value - a.value).slice(0, 10);
+    return stamp;
+  });
+  console.log(data);
+  return data;
+}

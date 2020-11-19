@@ -1,4 +1,5 @@
 // jQuery variables
+const $speedbuttons = $(".speed-button");
 const $choosefile = $("#choose-file");
 const $fileinputelt = $popupwrapper.find("#file-input>input[type='file']");
 const $draganddrop = $popupwrapper.find("#drag-and-drop");
@@ -37,4 +38,10 @@ $draganddrop.on("drop dragdrop", (e) => {
   e.preventDefault();
   $draganddrop.css("background", "none");
   handleFile(e.dataTransfer);
+});
+
+// Speed buttons
+$speedbuttons.on("click", function () {
+  const num = this.innerText.match(/[\d\.]+/)[0];
+  FPS = baseFPS / num;
 });

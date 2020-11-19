@@ -46,3 +46,35 @@ body {
 #choose-file {
   background: rgb(235, 90, 90);
 }
+
+#graph-wrapper-1 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#speeds {
+  margin: 10px 0;
+  display: flex;
+}
+
+.speed-button {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 25px;
+  font-family: sans-serif;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.speed-button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}

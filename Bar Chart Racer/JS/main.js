@@ -4,11 +4,12 @@ const $popupwrapper = $("#popup-wrapper");
 
 // Global variables
 var graphNum = 0;
-var fps = 20;
+const baseFPS = 30;
+var FPS = baseFPS;
 
 // Function to start graph animation
 function makeGraph(text, json = false) {
-  const data = json ? text : parseData(text);
+  const data = json ? sortData(text) : parseData(text);
   graphNum++;
   var localGraphNum = graphNum;
   setup(data);
@@ -18,7 +19,7 @@ function makeGraph(text, json = false) {
     t++;
     if (localGraphNum != graphNum ||
       t >= data.timestamps.length) return;
-    setTimeout(frame, fps);
+    setTimeout(frame, FPS);
   }
   frame();
 }
