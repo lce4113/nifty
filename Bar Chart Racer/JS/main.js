@@ -42,6 +42,8 @@ function handleFile(obj) {
   for (const graph of graphs) {
     const option = $(`<div class="option">${graph.name}</div>`).appendTo($options);
     const text = await getData(graph.file);
-    option.on("click", () => makeGraph(text));
+    const json = /\.json/.test(graph.file);
+    option.on("click", () =>
+      makeGraph(json ? JSON.parse(text) : text, json));
   }
 })();

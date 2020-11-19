@@ -43,5 +43,10 @@
     "name": "Game of Thrones",
     "description": "Characters in Endgame with the most screen time from S01E01 to S8E06.",
     "file": "./Data/game-of-thrones.txt"
+  },
+  {
+    "name": "Covid-19 Cases",
+    "description": "Countries with the most Covid-19 cases from December 2019 to November 2020.",
+    "file": "./Data/covid-19.json"
   }
 ]

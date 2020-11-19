@@ -39,6 +39,5 @@ function sortData(data) {
       .sort((a, b) => b.value - a.value).slice(0, 10);
     return stamp;
   });
-  console.log(data);
   return data;
 }

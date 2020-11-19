@@ -56,7 +56,7 @@ body {
 }
 
 #speeds {
-  margin: 10px 0;
+  margin-bottom: 10px;
   display: flex;
 }
 

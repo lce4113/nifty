@@ -11,7 +11,7 @@ const $codeexamples = $popupwrapper.find("#file-format>div>code");
   var citiesTXT = await getData("./Data/mincities.txt");
   var citiesJSON = JSON.stringify(await getData("./Data/mincities.json", true));
   htmlify = s => {
-    return `<code>${s.replace(/ /g, '&nbsp;')
+    return `<code>${s.replace(/\s/g, '&nbsp;')
       .replace(/\n/g, '<br>')}</code>`;
   }
   $codeexamples.eq(0).html(htmlify(citiesTXT));
